@@ -12,6 +12,15 @@ module.exports = {
         path: __dirname + '/build',
         filename: "bundle.js"
     },
+    resolve: {
+      // extensions: ['.js', '.jsx'],
+      modules: [path.resolve(__dirname, 'app'), 'node_modules'],
+      alias: {
+        webworkify: 'webworkify-webpack-dropin',
+        'videojs-contrib-hls': 'videojs-contrib-hls/dist/videojs-contrib-hls.min.js',
+        'videojs-playlist': 'videojs-playlist/dist/videojs-playlist.js'
+      }
+    },
     module: {
         loaders: [
             { test: /\.js?$/, loaders: ['react-hot', babelLoader], exclude: /node_modules/, includes: ['./index.js', path.join(__dirname, 'src')]},
@@ -22,6 +31,11 @@ module.exports = {
         ]
     },
     plugins: [
-      new webpack.NoErrorsPlugin()
+      new webpack.NoErrorsPlugin(),
+      new webpack.ProvidePlugin({
+        videojs: 'video.js',
+        'window.videojs': 'video.js',
+        "React": "react",
+      })
     ]
 }

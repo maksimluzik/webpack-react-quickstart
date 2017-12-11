@@ -28,6 +28,9 @@
     "react-hot-loader": "^1.2.7",
     "react-router": "^2.3.0",
     "style-loader": "^0.13.1",
+    "video.js": "^6.4.0",
+    "videojs-contrib-hls": "^5.12.2",
+    "videojs-playlist": "^4.0.2",
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.8.2"
   }
