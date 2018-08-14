@@ -12,7 +12,7 @@
     "web": "https://github.com/jefffriesen"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",

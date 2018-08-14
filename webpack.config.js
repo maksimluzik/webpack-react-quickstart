@@ -32,6 +32,7 @@ module.exports = {
     },
     plugins: [
       new webpack.NoErrorsPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
       new webpack.ProvidePlugin({
         videojs: 'video.js',
         'window.videojs': 'video.js',
